@@ -15,11 +15,6 @@ if (isset($_POST['send'])) {
 
         $rta = mail('phase.contacto@gmail.com', $asunt, $message);
         var_dump($rta);
-        if (!$atributos['success']) {
-            echo "<div class='error'>Completa el Captcha.</div>";
-        } elseif ($email) {
-            echo "<div class='success'>Formulario enviado correctamente!<br>Pronto nos contactaremos con usted</div>";
-        }
     }
     ?>
     <script>
