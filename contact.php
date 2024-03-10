@@ -31,7 +31,7 @@
         </nav>
     </header>
 
-    <form action="" method="post" id="contact-form">
+    <form action="php/email.php" method="post" id="contact-form">
         <header class="contact-header">
             <div class="contact">
                 <div class="contact-text">
