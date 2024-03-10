@@ -2,7 +2,6 @@
 
 if (isset($_POST['send'])) {
     if (!empty($_POST['email']) && !empty($_POST['asunt']) && !empty($_POST['message'])) {
-        $email = "phase.contacto@gmail.com";
         $emailuser = $_POST['email'];
         $asunt = $_POST['asunt'];
         $message = $_POST['message'];
@@ -14,10 +13,8 @@ if (isset($_POST['send'])) {
         $resp = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
         $atributos = json_decode($resp, TRUE);
 
-        $header = "From: $emailuser" . "\r\n";
-        $header .= "Reply-To: $emailuser" . "\r\n";
-        $header .= "X-Mailer: PHP/" . phpversion();
-        @mail($email, $emailuser, $asunt, $message);
+        $rta = mail('phase.contacto@gmail.com', $asunt, $message);
+        var_dump($rta);
         if (!$atributos['success']) {
             echo "<div class='error'>Completa el Captcha.</div>";
         } elseif ($email) {
