@@ -231,6 +231,7 @@ html {
 .footer-header {
     font-family: "Poppins", sans-serif;
     background: #000;
+    background-size: cover;
 }
 
 .footer-content {
@@ -343,8 +344,9 @@ html {
     }
 
     .inicio-p {
-        width: 110%;
+        width: 54%;
         font-size: 1rem;
+        letter-spacing: 0;
     }
 
     /* Proyectos */
@@ -362,7 +364,6 @@ html {
     .discord-text a {
         margin-top: 3rem;
     }
-    /* Contact */
 }
 
 @media screen and (max-width: 450px) {
@@ -413,6 +414,19 @@ html {
     .contact-info {
         min-height: 24rem;
     }
+    .inicio-p {
+        width: 60%;
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .inicio-p {
+        width: 64%;
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
 }
 
 @media screen and (max-width: 570px){
@@ -431,6 +445,81 @@ html {
     .contact-info {
         margin-top: 3rem;
         min-height: 16rem;
+    }
+    .inicio-p {
+        width: 70%;
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .inicio-p {
+        width: 75%;
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .inicio-p {
+        width: 79%;
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .inicio-p {
+        width: 90%;
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .inicio-p {
+        width: 95%;
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .inicio-p {
+        width: 72%;
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .inicio-p {
+        width: 77%;
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .footer-contact h3 {
+        font-size: 1rem;
+    }
+    .footer-contact i {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .footer-contact h3 {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    /* Inicio */
+    .inicio-text h3 {
+        font-size: 3rem;
     }
 }
 
@@ -492,10 +581,6 @@ html {
     box-shadow: -1px -1px 22px 0px rgba(126, 124, 124, 0.75);
     -webkit-box-shadow: -1px -1px 22px 0px rgba(126, 124, 124, 0.75);
     -moz-box-shadow: -1px -1px 22px 0px rgba(126, 124, 124, 0.75);
-}
-
-input:invalid, textarea:invalid {
-    background-color: #ff00003d;
 }
 
 .contact-text h3 {
