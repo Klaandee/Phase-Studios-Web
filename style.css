@@ -362,6 +362,7 @@ html {
     .discord-text a {
         margin-top: 3rem;
     }
+    /* Contact */
 }
 
 @media screen and (max-width: 450px) {
@@ -485,12 +486,16 @@ html {
 .contact {
     background-color: #7e7c7c;
     width: 30rem;
-    height: 32rem;
+    height: 26rem;
     padding: 10px 15px;
     border-radius: 10px;
     box-shadow: -1px -1px 22px 0px rgba(126, 124, 124, 0.75);
     -webkit-box-shadow: -1px -1px 22px 0px rgba(126, 124, 124, 0.75);
     -moz-box-shadow: -1px -1px 22px 0px rgba(126, 124, 124, 0.75);
+}
+
+input:invalid, textarea:invalid {
+    background-color: #ff00003d;
 }
 
 .contact-text h3 {
@@ -548,7 +553,7 @@ html {
     min-height: 100px;
     max-height: 100px;
     min-width: 15rem;
-    max-width: 22rem;
+    max-width: 15rem;
     margin-left: 10px;
 }
 
@@ -627,9 +632,6 @@ html {
     margin: 10px;
 }
 
-/* Recaptcha */
-
-.contact-recaptcha {
-    margin-top: 1rem;
-    margin-left: 1rem;
+#email-send {
+    opacity: 0;
 }

@@ -24,4 +24,17 @@ window.addEventListener("scroll", function(){
     header.classList.toggle("down",window.scrollY>0);
 });
 
-// Evitar Reenvio de Formulario
+// Form Contact
+
+const $form = document.querySelector('#contact-form');
+const $buttonMailTo = document.querySelector('#email-send');
+
+$form.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event){
+    event.preventDefault();
+    const form = new FormData(this);
+    console.log(form.get('email'));
+    $buttonMailTo.setAttribute('href', `mailto:phase.studios@gmail.com?subject=Asunt: ${form.get('asunt')} Email: ${form.get('email')}&body=${form.get('message')}`);
+    $buttonMailTo.click();
+}

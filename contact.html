@@ -31,7 +31,7 @@
         </nav>
     </header>
 
-    <form action="php/email.php" method="post" id="contact-form">
+    <form action="" method="post" id="contact-form">
         <header class="contact-header">
             <div class="contact">
                 <div class="contact-text">
@@ -40,18 +40,15 @@
                 </div>
                 <div class="contact-email">
                     <i class="bi bi-envelope-at-fill"></i>
-                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" minlength="13" maxlength="60" required>
                 </div>
                 <div class="contact-asunt">
                     <i class="bi bi-box-fill"></i>
-                    <input type="text" name="asunt" id="asunt" placeholder="Asunt" required>
+                    <input type="text" name="asunt" id="asunt" placeholder="Asunt" minlength="4" maxlength="35" required>
                 </div>
                 <div class="contact-message">
                     <i class="bi bi-chat-dots-fill"></i><textarea name="message" id="message" cols="30" rows="10"
-                        placeholder="Message" required></textarea>
-                </div>
-                <div class="contact-recaptcha">
-                    <div class="g-recaptcha" data-sitekey="6LdXqJMpAAAAAOIBCdUKeTPkl_VyUwyTlRct7XkX"></div>
+                        placeholder="Message" minlength="50" maxlength="4000" required></textarea>
                 </div>
                 <div class="contact-btn">
                     <button id="contact-btn" type="submit" name="send">Enviar</button>
@@ -70,10 +67,11 @@
                 </div>
             </div>
         </header>
+        <script>
+            history.replaceState(null,null,location.pathname);
+        </script>
     </form>
-    <?php
-    include("php/email.php");
-    ?>
+    <a href="mailto:phase.studios@gmail.com" id="email-send">mail</a>
     <header class="footer-header" style="margin-top: 10rem;">
         <div class="footer-content">
             <img src="img/Phase-Studios-FaviIcon.png" alt="" class="footer-icon">
